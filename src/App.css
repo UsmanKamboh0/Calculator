@@ -8,17 +8,24 @@ body {
 .container {  
   width: auto;  
   margin: 20px;  
-  color:black;  
+  background-color: white;
+  /* border: 70px solid red; */
 }  
+.cont {  
+  width: auto;  
+  margin: 20px; 
+   
+  background-color: lightseagreen;  
+} 
 .calc-body {  
   width: 275px;  
   margin: auto;  
   min-height: 400px;  
   border: solid 1px #3A4655;  
-  box-shadow: 0 8px 50px -7px black;  
+  /* box-shadow: 0 8px 50px -7px lightseagreen;   */
 }  
 .calc-screen {  
-  background: gray;  
+  background: white;  
   width: 100%;  
   height: 50px;  
   padding: 20px;  
@@ -32,21 +39,24 @@ body {
 }  
 .calc-button-row {  
   width: 100%;  
-  /* background: #3C4857;   */
+  
+  background: white;  
 }  
 .button {  
-  width: 25%;  
-  background: wheat;  
+  width: 67px;  
+  background: grey;  
   color: black;  
   padding: 20px;  
   display: inline-block;  
   font-size: 25px;  
   text-align: center;  
   vertical-align: middle;  
-  /* margin-right: -4px;   */
+ margin-left: 0px;
+ margin-right: 1px;
+ margin-top: 1px;
+   border-radius: 40px;
   border: none;
-  border-right: solid 1px #3C4857;  
-  border-bottom: solid 1px #3C4857;  
+  
   transition: all 0.2s ease-in-out;  
 }  
 .button.l {  
@@ -133,18 +143,35 @@ input[type=text] {
 }     
 
 .button0 {  
-  width: 50%;  
-  background: wheat;  
+  width: 133px;  
+  background: grey;  
   color: black;  
   padding: 20px;  
   display: inline-block;  
   font-size: 25px;  
   text-align: center;  
   vertical-align: middle;  
+ margin-left: 0px;
+ margin-right: 1px;
+ margin-top: 1px;
+   border-radius: 40px;
+  border: none;  
+}  
+.button1 {  
+  width: 67px;  
+  background: yellow;  
+  color: black;  
+  padding: 20px;  
+  display: inline-block;  
+  font-size: 25px;  
+  text-align: center;  
+  vertical-align: middle;  
+ margin-left: 0px;
+ margin-right: 1px;
+ margin-top: 1px;
+   border-radius: 40px;
   border: none;
-  /* margin-right: -4px;   */
-  border-radius: 0px;
-  border-right: solid 1px #3C4857;  
-  border-bottom: solid 1px #3C4857;  
+  
   transition: all 0.2s ease-in-out;  
+ 
 }  

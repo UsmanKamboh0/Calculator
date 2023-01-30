@@ -20,6 +20,7 @@ function App() {
     <>
     <h1>Smart Calculator In React</h1>
     <div className="container">
+    <div className="cont">
       <div className="calc-body">
         <div className="calc-screen">
           <div className="calc-operation">
@@ -27,21 +28,21 @@ function App() {
          </div>
            </div>
         <div className="calc-button-row">
-          <button className="button l"
+          <button className="button1"
             type="button"
             value="Clear"
 
             onClick={cleandata}
 
           >C</button>
-          <button className="button l"
+          <button className="button1"
             type="button"
             value="-"
 
             onClick={clickhandler}
 
           >-</button>
-          <button className="button l"
+          <button className="button1"
             type="button"
             value="%"
 
@@ -159,6 +160,7 @@ function App() {
 
           >=</button>
         </div>
+      </div>
       </div>
     </div>
     </>
