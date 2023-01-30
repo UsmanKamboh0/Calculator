@@ -18,7 +18,11 @@ function App() {
   }
   return (
     <>
-    <h1>Smart Calculator In React</h1>
+    <div className="title">
+    Smart Calculator In React
+
+    </div>
+   
     <div className="container">
       <br></br>
     <div className="cont">
@@ -27,6 +31,7 @@ function App() {
           <div className="calc-operation">
          <h3  style={{hight:"50px", textAlign:"right", margin:"-1px -11px", padding:"20px 20px 10px 10px", fontSize:"55px" }}> {result}</h3>
          </div>
+        
            </div>
         <div className="calc-button-row">
           <button className="button1"
