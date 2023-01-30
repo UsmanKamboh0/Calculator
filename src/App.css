@@ -6,9 +6,9 @@ body {
   background:white;  
 }  
 .container {  
-  width: auto;  
-  margin: 20px;
-  height: 550px;
+  width: 100%;  
+  /* margin: 10px; */
+  height: 555px;
    
   background-color: rgba(10,203,252,255);
   /* border: 70px solid red; */
@@ -29,9 +29,10 @@ body {
 }  
 .calc-screen {  
   background: white;  
-  width: 100%;  
+  width: 110%;  
   height: 140px;  
-  padding: 20px;  
+  padding: 20px;
+  margin-left: -20px;  
   border-radius: 20px 20px 0px 0px;
 }  
  
@@ -43,15 +44,19 @@ body {
    
 }  
 .calc-button-row {  
-  width: 100%;  
+  width: 110%;  
   /* border-radius: 0px 0px 20px 20px; */
-
-  background: white;  
+padding-left: 15px;
+padding-bottom: 5px;
+  background: white;
+  margin-left: -20px;  
 }  
 .calc-button-row1 {  
-  width: 100%;  
+  width: 110%;  
   border-radius: 0px 0px 20px 20px;
  padding-bottom: 10px;
+ padding-left: 15px;
+ margin-left: -20px;
 
   background: white;  
 }  
@@ -75,6 +80,7 @@ body {
 .button.l {  
   color: white;  
   background: #fa9428;  
+  
 }  
 .button.c {  
   color: #D95D4E;  
@@ -156,7 +162,7 @@ input[type=text] {
 }     
 
 .button0 {  
-  width: 133px;  
+  width: 130px;  
   background: #cccccc;  
   color: black;  
   padding: 20px;  
