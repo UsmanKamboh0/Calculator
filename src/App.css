@@ -8,7 +8,7 @@ body {
 .container {  
   width: auto;  
   margin: 20px;
-  height: 470px;
+  height: 550px;
    
   background-color: rgba(10,203,252,255);
   /* border: 70px solid red; */
@@ -30,7 +30,7 @@ body {
 .calc-screen {  
   background: white;  
   width: 100%;  
-  height: 80px;  
+  height: 140px;  
   padding: 20px;  
   border-radius: 20px 20px 0px 0px;
 }  

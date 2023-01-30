@@ -25,7 +25,7 @@ function App() {
       <div className="calc-body">
         <div className="calc-screen">
           <div className="calc-operation">
-         <h3  style={{textAlign:"right", margin:"-5px -5px", fontSize:"45px" }}> {result}</h3>
+         <h3  style={{hight:"50px", textAlign:"right", margin:"-1px -11px", padding:"20px 20px 10px 10px", fontSize:"55px" }}> {result}</h3>
          </div>
            </div>
         <div className="calc-button-row">
