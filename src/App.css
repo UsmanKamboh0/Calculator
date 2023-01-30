@@ -7,44 +7,57 @@ body {
 }  
 .container {  
   width: auto;  
-  margin: 20px;  
-  background-color: white;
+  margin: 20px;
+  height: 470px;
+   
+  background-color: rgba(10,203,252,255);
   /* border: 70px solid red; */
 }  
-.cont {  
+/* .cont {  
   width: auto;  
   margin: 20px; 
    
   background-color: lightseagreen;  
-} 
+}  */
 .calc-body {  
   width: 275px;  
   margin: auto;  
   min-height: 400px;  
-  border: solid 1px #3A4655;  
+  /* border: solid 1px #3A4655;  */
+  border-radius: 20px; 
   /* box-shadow: 0 8px 50px -7px lightseagreen;   */
 }  
 .calc-screen {  
   background: white;  
   width: 100%;  
-  height: 50px;  
+  height: 80px;  
   padding: 20px;  
+  border-radius: 20px 20px 0px 0px;
 }  
  
 .calc-typed {  
   margin-top: 20px;  
-  font-size: 45px;  
+  font-size: 50px;  
   text-align: right;  
-  color: #fff;  
+  color: #fff; 
+   
 }  
 .calc-button-row {  
   width: 100%;  
-  
+  /* border-radius: 0px 0px 20px 20px; */
+
+  background: white;  
+}  
+.calc-button-row1 {  
+  width: 100%;  
+  border-radius: 0px 0px 20px 20px;
+ padding-bottom: 10px;
+
   background: white;  
 }  
 .button {  
   width: 67px;  
-  background: grey;  
+  background: #cccccc;  
   color: black;  
   padding: 20px;  
   display: inline-block;  
@@ -61,7 +74,7 @@ body {
 }  
 .button.l {  
   color: white;  
-  background: orange;  
+  background: #fa9428;  
 }  
 .button.c {  
   color: #D95D4E;  
@@ -144,7 +157,7 @@ input[type=text] {
 
 .button0 {  
   width: 133px;  
-  background: grey;  
+  background: #cccccc;  
   color: black;  
   padding: 20px;  
   display: inline-block;  
@@ -155,11 +168,30 @@ input[type=text] {
  margin-right: 1px;
  margin-top: 1px;
    border-radius: 40px;
-  border: none;  
+  border: none; 
+   
 }  
 .button1 {  
   width: 67px;  
-  background: yellow;  
+  background: #fdd80d;  
+  color: black;  
+  padding: 20px;  
+  display: inline-block;  
+  font-size: 25px;  
+  text-align: center;  
+  vertical-align: middle;  
+ margin-left: 0px;
+ margin-right: 1px;
+ margin-top: 1px;
+   border-radius: 40px;
+  border: none;
+  
+  transition: all 0.2s ease-in-out;  
+ 
+}  
+.button2 {  
+  width: 67px;  
+  background: #feb86a;  
   color: black;  
   padding: 20px;  
   display: inline-block;  
