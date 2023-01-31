@@ -34,12 +34,29 @@ const [open, setOpen] = useState(false)
   console.log(history)
   
 
+  const clear=()=>{
+    if(result === ''){
+        return
+    }
+    const value=result.slice(0,-1)
+    SetResult(value)
+}
 
 
 
 
   const calculate = () => {
     // console.log("=======>", result+" = "+eval(result).toString())
+
+    var bt = document.getElementById('btn');
+    console.log(bt)
+    if (result != '') {
+      bt.disabled = true;
+  }
+  else {
+      bt.disabled = false;
+  }
+
     const historyData= [...history, result+" = "+eval(result).toString()];
     SetHistory(historyData);
     SetResult(eval(result).toString())
@@ -94,18 +111,17 @@ const [open, setOpen] = useState(false)
           <Popover
             {...bindPopover(popupState)}
             anchorReference="anchorPosition"
-            anchorPosition={{ top: 120, left: 880 }}
+            anchorPosition={{ top: 130, left: 880,  }}
             anchorOrigin={{
-              vertical: 'bottom',
-              horizontal: 'left',
+              
             }}
             transformOrigin={{
-             
+              // vertical: 'top',
               horizontal: 'center',
             }}
           >
             <Typography sx={{ p: 2 }}> {history && history.map((history, i) => (
-          <li key={i}>{history}</li>
+          <div key={i}>{history}</div>
         ))}</Typography>
           </Popover>
         </div>
@@ -196,7 +212,11 @@ const [open, setOpen] = useState(false)
             onClick={clickhandler}
 
           >6</button>
-          <div className="button2"> ? </div>
+          <button className="button2"
+            
+            onClick={clear}
+
+          ><img  width={20} height={20}  src="https://cdn-icons-png.flaticon.com/512/159/159805.png" /></button>
         </div>
         <div className="calc-button-row">
           <button className="button"
@@ -246,7 +266,7 @@ const [open, setOpen] = useState(false)
           <button className="button l"
             type="button"
             value="="
-
+            id="btn"
             onClick={calculate}
 
           >=</button>
