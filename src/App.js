@@ -1,38 +1,123 @@
 import logo from './logo.svg';
 import './App.css';
-import React, { useState } from "react";
-
+import { useState, useEffect } from "react";
+import Typography from '@mui/material/Typography';
+import Popover from '@mui/material/Popover';
+import HistoryIcon from '@mui/icons-material/History';
+import PopupState, { bindTrigger, bindPopover } from 'material-ui-popup-state';
+import {
+  Button,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogContentText,
+  DialogActions
+} from '@mui/material'
 function App() {
 
   const [result, SetResult] = useState("");
+  const [history, SetHistory] = useState([]);
+
+
+const [open, setOpen] = useState(false)
+
+
+
 
   const clickhandler = (event) => {
     SetResult(result.concat(event.target.value))
+  }
 
-  }
+  // history.push({
+  //   result: result,
+  // });
+  console.log(history)
+  
+
+
+
+
+
   const calculate = () => {
+    // console.log("=======>", result+" = "+eval(result).toString())
+    const historyData= [...history, result+" = "+eval(result).toString()];
+    SetHistory(historyData);
     SetResult(eval(result).toString())
+    // SetResult("");
+    
   }
+
   const cleandata = () => {
     SetResult("");
   }
+
+
+  
+
+  
+  useEffect(() => {
+    localStorage.setItem("history", JSON.stringify(history));
+  }, [history]);
+
+
+  
   return (
     <>
+    
     <div className="title">
     Smart Calculator In React
+   
+ 
+
+
 
     </div>
-   
+ 
+
+
+
+    
     <div className="container">
       <br></br>
     <div className="cont">
       <div className="calc-body">
+        
         <div className="calc-screen">
+        <PopupState  popupId="demo-popup-popover">
+      {(popupState) => (
+        <div >
+          <div className="popup">
+          <Button variant="contained" {...bindTrigger(popupState)}>
+          <HistoryIcon/>
+          </Button>
+          </div>
+          <Popover
+            {...bindPopover(popupState)}
+            anchorReference="anchorPosition"
+            anchorPosition={{ top: 120, left: 880 }}
+            anchorOrigin={{
+              vertical: 'bottom',
+              horizontal: 'left',
+            }}
+            transformOrigin={{
+             
+              horizontal: 'center',
+            }}
+          >
+            <Typography sx={{ p: 2 }}> {history && history.map((history, i) => (
+          <li key={i}>{history}</li>
+        ))}</Typography>
+          </Popover>
+        </div>
+      )}
+    </PopupState>
           <div className="calc-operation">
-         <h3  style={{hight:"50px", textAlign:"right", margin:"-1px -11px", padding:"20px 20px 10px 10px", fontSize:"55px" }}> {result}</h3>
+            
+         <h3  style={{hight:"50px", textAlign:"right", margin:"-1px -11px", padding:"20px 20px 10px 10px", fontSize:"55px" }}>{result}</h3>
          </div>
         
            </div>
+           
         <div className="calc-button-row">
           <button className="button1"
             type="button"
@@ -169,6 +254,7 @@ function App() {
         
       </div>
       </div>
+ 
     </div>
     </>
   );
